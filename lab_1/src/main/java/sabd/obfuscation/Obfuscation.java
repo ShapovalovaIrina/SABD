@@ -55,10 +55,7 @@ public class Obfuscation {
         Map<String, List<String>> map = new HashMap<>();
         for (String key : Employee.getValues()) {
             map.put(key, new ArrayList<>());
-        }
-
-        // put encoded sign value in list head
-        for(String key : map.keySet()) {
+            // put encoded sign value in list head
             map.get(key).add(encodeString(key));
         }
 

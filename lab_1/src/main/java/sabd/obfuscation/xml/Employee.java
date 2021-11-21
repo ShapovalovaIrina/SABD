@@ -3,18 +3,15 @@ package sabd.obfuscation.xml;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @JacksonXmlRootElement(localName = "employee")
 public class Employee {
-    @JacksonXmlProperty(isAttribute = true)
+    @JacksonXmlProperty(isAttribute = true, localName = ID)
     private String id;
-    @JacksonXmlProperty
+    @JacksonXmlProperty(localName = FIRST_NAME)
     private String firstName;
-    @JacksonXmlProperty
+    @JacksonXmlProperty(localName = LAST_NAME)
     private String lastName;
-    @JacksonXmlProperty()
+    @JacksonXmlProperty(localName = LOCATION)
     private String location;
 
     private static final String ID = "id";
